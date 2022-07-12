@@ -1,31 +1,49 @@
-import React, {useEffect, useState} from 'react';
+import React from "react";
 
 function PicturesLine() {
-
-    const [images, setImages] = useState([])
-
-    useEffect(() => {
-        fetch("/pictures-line")
-            .then(response => response.json())
-            .then(json => {
-                setImages(json)
-            })
-    }, [])
-
-    return (
-        <div className="pictures-line">
-            <div className="pictures-line__content">
-                <div className="pictures-line__content-images">
-                    {
-                        images.map(todo => {
-                            return (
-                                <div className="images" key={todo.id}><img src={todo.images} alt="img" className="photo"/></div>
-                            )})
-                    }
-                </div>
-            </div>
+  return (
+    <div className="pictures-line">
+      <div className="pictures-line__content">
+        <div className="pictures-line__content-images">
+          <div className="images">
+            <img
+              src="./assets/images/slide-img-6.jpg"
+              alt="img"
+              className="photo"
+            />
+          </div>
+          <div className="images">
+            <img
+              src="./assets/images/slide-img-4.jpg"
+              alt="img"
+              className="photo"
+            />
+          </div>
+          <div className="images">
+            <img
+              src="./assets/images/slide-img-3.jpg"
+              alt="img"
+              className="photo"
+            />
+          </div>
+          <div className="images">
+            <img
+              src="./assets/images/slide-img-2.jpg"
+              alt="img"
+              className="photo"
+            />
+          </div>
+          <div className="images">
+            <img
+              src="./assets/images/slide-img-1.jpg"
+              alt="img"
+              className="photo"
+            />
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 }
 
 export default PicturesLine;
