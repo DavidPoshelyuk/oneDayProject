@@ -1,0 +1,90 @@
+//$colors: (
+//  red: red,
+//  green: green,
+//);
+//
+//@each $color in map-keys($colors) {
+//  :root {
+//    --color-Green: #144c32;
+//  }
+//}
+
+
+body, #root {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* zIndex */
+
+/* zIndex */
+
+/* Переменные */
+@import "vars/project-vars";
+
+@import 'vars/reboot';
+@import "fonts";
+
+@import 'vars/section';
+@import "Hx";
+/* Переменные */
+
+/* Шрифты */
+@import 'icons';
+/* Шрифты */
+
+/* simple grid Bootstrap fork*/
+@import "simple-grid";
+/* simple grid Bootstrap fork*/
+
+
+/* MainLayout */
+@import "main-layout";
+/* MainLayout */
+
+/* Components */
+@import 'btn';
+@import "../../components/Header/style";
+/* Components */
+
+
+/* other styles */
+b {
+  font-weight: $font-weight-bold;
+}
+
+.color-Green {
+  color: var(--color-Green);
+}
+.bg-color-Green {
+  background-color: var(--color-Green);
+}
+.color-Dark-gray {
+  color: var(--color-Dark-grey);
+}
+.bg-color-Dark-gray {
+  background-color: var(--color-Dark-grey);
+}
+.color-Gray-light {
+  color: var(--color-Gray-light);
+}
+.bg-color-Gray-light {
+  background-color: var(--color-Gray-light);
+}
+.color-Grey-medium {
+  color: var(--color-Grey-medium);
+}
+.bg-color-Grey-medium {
+  background-color: var(--color-Grey-medium);
+}
+.color-Red {
+  color: var(--color-Red);
+}
+.bg-color-Red {
+  background-color: var(--color-Red);
+}
+
+/* other styles */
