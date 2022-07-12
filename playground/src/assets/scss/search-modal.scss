@@ -1,4 +1,4 @@
-@import "./variables";
+@import "variables";
 .modal-wrapper {
   position: fixed;
   top: 0;
@@ -13,49 +13,41 @@
   align-items: center;
   justify-content: center;
   transition: .3s;
-
   &__close {
     display: flex;
     text-align: right;
     align-items: center;
     font-size: 40px;
-
     svg {
       margin-left: -27px;
       font-size: 30px;
     }
   }
-
   &__body {
     max-width: 500px;
     margin: auto;
     padding: 20px;
     border-radius: 10px;
   }
-
   input {
     background-color: rgba(0, 0, 0, 0);
     width: 100%;
     padding: 10px;
     border: none;
-    outline:none;
+    outline: none;
     color: white;
     transition: 0.7s;
     border-bottom: 2px solid white;
-
     &::placeholder {
       color: white;
     }
-
     &:focus {
       border-bottom: 2px solid #00ACB1;
     }
-
     &:active {
       border: none;
     }
   }
-
   .faTimes {
     position: absolute;
     top: 60px;
@@ -68,18 +60,14 @@
     justify-content: center;
     cursor: pointer;
     transition: 0.3s;
-
     &:hover {
-
       span:last-child {
         transform: rotate(180deg);
       }
-
       span:first-child {
         transform: rotate(0deg);
       }
     }
-
     span {
       position: absolute;
       width: 24px;
@@ -88,16 +76,13 @@
       transition: .3s;
       background-color: #fff;
     }
-
     span:first-child {
       transform: rotate(45deg);
     }
-
     span:last-child {
       transform: rotate(135deg);
     }
   }
-
 }
 .modal-wrapper-none {
   display: none;
