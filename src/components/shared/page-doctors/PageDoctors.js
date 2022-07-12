@@ -1,17 +1,15 @@
 import React, {useEffect, useState} from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {NavLink} from "react-router-dom";
+import {useAppSelector} from "../../../store/store";
 
 function PageDoctors() {
-
-    const [data, setData] = useState([]);
-
-
+    const doctors = useAppSelector(state => state.doctorReducer)
 
     function getStatusTrue(arg) {
 
-        let item=[];
-        for (let i = 0; i <= arg-1; i++) {
+        let item = [];
+        for (let i = 0; i <= arg - 1; i++) {
             item.push(<span>&#9733;</span>)
         }
         return item
@@ -19,28 +17,20 @@ function PageDoctors() {
 
     function getStatusFalse(arg) {
 
-        let item=[];
+        let item = [];
         for (let i = arg; i <= 4; i++) {
             item.push(<span>&#9734;</span>)
         }
         return item
     }
 
-    useEffect(() => {
-        fetch('/doctors')
-            .then(response => response.json())
-            .then(json => {
-                setData(json)
-            })
-    }, [])
-
     return (
         <div className="section-page-doctors">
             <div className="container ">
                 <div className="row">
-                    {data.map(todo => {
+                    {doctors.map(todo => {
                             return (
-                                <div className="col-lg-4 col-sm-6 doctor" >
+                                <div className="col-lg-4 col-sm-6 doctor">
                                     <div className="doctor__wrapper">
                                         <div className="doctor__wrapper-image">
                                             <img src={todo.photo}/>
