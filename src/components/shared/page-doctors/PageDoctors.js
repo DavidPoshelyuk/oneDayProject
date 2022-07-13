@@ -30,7 +30,7 @@ function PageDoctors() {
                 <div className="row">
                     {doctors.map(todo => {
                             return (
-                                <div className="col-lg-4 col-sm-6 doctor">
+                                <div key={todo.key} className="col-lg-4 col-sm-6 doctor">
                                     <div className="doctor__wrapper">
                                         <div className="doctor__wrapper-image">
                                             <img src={todo.photo}/>
