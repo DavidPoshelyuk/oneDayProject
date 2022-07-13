@@ -1,26 +1,41 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 
 function PicturesLine() {
 
-    const [images, setImages] = useState([])
-
-    useEffect(() => {
-        fetch("/pictures-line")
-            .then(response => response.json())
-            .then(json => {
-                setImages(json)
-            })
-    }, [])
+    const picturesLineImage = [
+        {
+            "id": 1,
+            "images": "./assets/images/slide-img-6.jpg"
+        },
+        {
+            "id": 2,
+            "images": "./assets/images/slide-img-1.jpg"
+        },
+        {
+            "id": 3,
+            "images": "./assets/images/slide-img-2.jpg"
+        },
+        {
+            "id": 4,
+            "images": "./assets/images/slide-img-3.jpg"
+        },
+        {
+            "id": 5,
+            "images": "./assets/images/slide-img-4.jpg"
+        }
+    ]
 
     return (
         <div className="pictures-line">
             <div className="pictures-line__content">
                 <div className="pictures-line__content-images">
                     {
-                        images.map(todo => {
+                        picturesLineImage.map(todo => {
                             return (
-                                <div className="images" key={todo.id}><img src={todo.images} alt="img" className="photo"/></div>
-                            )})
+                                <div className="images" key={todo.id}><img src={todo.images} alt="img"
+                                                                           className="photo"/></div>
+                            )
+                        })
                     }
                 </div>
             </div>
